@@ -1,7 +1,7 @@
 /**
  * Write a description of class CalculatorTriRadian here.
  *
- * @author MonikaFebrina
+ * @author M. RISKI AZIS
  * @version 0.1
  */
 public class CalculatorTriRadian extends CalculatorTrigonometri

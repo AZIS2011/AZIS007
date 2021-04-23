@@ -2,7 +2,7 @@ import java.lang.Math;
 /**
  *class CalculatorTridegree
  *
- * @author MonikaFebrina
+ * @author M. RISKI AZIS
  * @version 0.1
  */
 public  class CalculatorTriDegree extends CalculatorTrigonometri

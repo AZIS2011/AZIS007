@@ -2,7 +2,7 @@ import java.lang.Math;
 /**
  * Abstract class CalculatorTrigonometri 
  *
- * @author MonikaFebrina
+ * @author M. RISKI AZIS
  * @version 0.1
  */
 public abstract class CalculatorTrigonometri extends Calculator
