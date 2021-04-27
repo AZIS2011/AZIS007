@@ -4,7 +4,7 @@
  * @author M. RISKI AZIS
  * @version 0.1
  */
-public class Calculatorscientific extends Calculator
+public class Calculatorscientific extends Kalkulator
 {
      /**
      * Constructor for objects of class Calculator

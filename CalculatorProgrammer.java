@@ -4,7 +4,7 @@
  * @author M. RISKI AZIS
  * @version 0.1
  */
-public class CalculatorProgrammer extends Calculator
+public class CalculatorProgrammer extends Kalkulator
 {
     
     /**

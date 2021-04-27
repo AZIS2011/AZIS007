@@ -4,13 +4,14 @@
  * @author M. RISKI AZIS
  * @version 0.1
  */
-public class Calculator
+public class Calculator implements SimpanOperasiCalculator
 {
      // op1
     public double op1=0;
     public double op2=0;
     public static final String info = "Kalkulatorku";
     public static int jumlahobject = 0;
+    private SimpanOperasiCalculator soc;
 
     /**
      * Constructor for objects of class Calculator
@@ -20,12 +21,18 @@ public class Calculator
         // initialise instance variables
         this.jumlahobject += 1;
     }
-
+      /**
+     * Constructor for objects of class Calculator
+     */
+    public Calculator(SimpanOperasiCalculator soc)
+    {
+        // initialise instance variables
+        this.soc = soc;
+    }
     /**
      * Constructor for objects of class Calculator
      * @param  double, double inisialisasi nilai dari op1 dan op2
     */
-
     public Calculator(double op1, double op2)
     {
         this.op1 = op1;
@@ -33,7 +40,6 @@ public class Calculator
         this.jumlahobject += 1;
 
     }
-
     /**
      * Constructor for objects of class Calculator
      * @param  double, double inisialisasi nilai dari op1 dan op2
@@ -45,10 +51,6 @@ public class Calculator
         this.jumlahobject += 1;
 
     }
-
-
-
-
     /**
      * set op1
      *
@@ -59,7 +61,16 @@ public class Calculator
     {
         this.op1 = op1;
     }
-
+    /**
+     * set soc
+     *
+     * @param  SimpanOperasiCalculator   
+     * @return  void
+     */
+    public void setSimpanOperasi(SimpanOperasiCalculator soc)
+    {
+        this.soc = soc;
+    }
 
     /**
      * get op1
@@ -71,8 +82,6 @@ public class Calculator
     {
         return this.op1;
     }
-
-
     /**
      * jumlah tanpa parameter
      *
@@ -81,9 +90,9 @@ public class Calculator
      */
     public double jumlah() 
     {
+        simpanOperasi(String.valueOf(this.op1) +" + "+ String.valueOf(this.op2));
         return this.op1 + this.op2;
     }
-
      /**
      * jumlah dengan parameter
      *
@@ -144,8 +153,8 @@ public class Calculator
      * @param  double op1
      *         double op2
      * @return double hasil pembagian op1 \op2
-     */
-
+     */  
+    
      public double bagi(double op1, double op2) 
     {
         this.op1 = op1;
@@ -153,4 +162,28 @@ public class Calculator
         return this.op1 /this.op2;
     }
 
+     /**
+     * simpanOperasi
+     *
+     * @param  String data
+     *      
+     * @return void
+     */
+    public void simpanOperasi(String data) 
+    {
+        //simpan operasi
+        this.soc.simpanOperasi(data);
+    }
+    /**
+     * bacaOperasi
+     *
+     * @param  void
+     *      
+     * @return String
+     */
+    public String bacaOperasi() 
+    {
+        //baca operasi
+        return this.soc.bacaOperasi();
+    }
 }
